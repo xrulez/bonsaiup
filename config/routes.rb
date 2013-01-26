@@ -1,5 +1,17 @@
 Skillexchange::Application.routes.draw do
-  resources :microposts
+  root :to => "static_pages#home"
+  get "home/index"
+
+  get "home/search"
+
+  get "static_pages/index"
+
+  get "static_pages/search"
+
+  resources :keywords
+
+
+  resources :skills
 
 
   resources :courses
