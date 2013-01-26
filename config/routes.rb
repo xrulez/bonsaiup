@@ -8,11 +8,17 @@ Skillexchange::Application.routes.draw do
 
   get "static_pages/search"
 
+  get "static_pages/register"
+
+  get "static_pages/home"
+
+  get "static_pages/help"
+
+
   resources :keywords
 
 
   resources :skills
-
 
   resources :courses
 
