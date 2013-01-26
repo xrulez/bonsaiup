@@ -1,9 +1,19 @@
 Skillexchange::Application.routes.draw do
+  resources :bookmarks
+
+
+  get "bookmarks/index"
+
+  get "bookmarks/edit"
+
+  get "bookmarks/new"
+
   root :to => "static_pages#home"
   get "home/index"
 
   get "home/search"
 
+  get "static_pages/create"
   get "static_pages/index"
 
   get "static_pages/search"
@@ -15,14 +25,14 @@ Skillexchange::Application.routes.draw do
   get "static_pages/help"
 
 
+
+
   resources :keywords
 
 
   resources :skills
 
   resources :courses
-
-
   resources :users
 
 

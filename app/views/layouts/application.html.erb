@@ -1,22 +1,18 @@
+<% provide(:title, 'BonsaiUp') %>
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BonzaiUp - Claim</title>
+  <title><%= yield(:title) %> - Claim</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>   
 </head>
 <body>
-	<div id="container">
-		<div id="header">
-			<%= render "shared/topmenu" %>
-		</div>
-		<div id="content">
+  <%= render "layouts/header" %>
+	<div class="container">
 			<%= yield %>
-		</div>
-		<div id="footer">
-			<%= render "shared/footer" %>
-		</div>
-	</div>
+	    <%= render "layouts/footer" %>
+  </div>
 </body>
 </html>
