@@ -1,0 +1,17 @@
+class StaticPagesController < ApplicationController
+<<<<<<< HEAD
+  def index
+  end
+
+  def search
+=======
+  def search
+  end
+
+  def register
+  end
+  
+  def home
+>>>>>>> 069c12a1f14a07f647e49f600d45408e4687e9bf
+  end
+end
