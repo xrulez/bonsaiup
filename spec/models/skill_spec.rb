@@ -1,16 +1,16 @@
 # == Schema Information
 #
-# Table name: courses
+# Table name: skills
 #
 #  id          :integer          not null, primary key
-#  title       :string(255)
-#  keyword     :string(255)
-#  category    :string(255)
 #  description :string(255)
+#  userId      :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
 
-class Course < ActiveRecord::Base
-  attr_accessible :category, :description, :keyword, :title
+require 'spec_helper'
+
+describe Skill do
+  pending "add some examples to (or delete) #{__FILE__}"
 end
