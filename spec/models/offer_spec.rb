@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe Bookmark do
+describe Offer do
   pending "add some examples to (or delete) #{__FILE__}"
 end

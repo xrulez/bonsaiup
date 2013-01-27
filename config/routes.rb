@@ -1,39 +1,23 @@
 Skillexchange::Application.routes.draw do
-  resources :bookmarks
+  resources :offers
 
-
-  get "bookmarks/index"
-
-  get "bookmarks/edit"
-
-  get "bookmarks/new"
 
   root :to => "static_pages#home"
-  get "home/index"
-
-  get "home/search"
-
-  get "static_pages/create"
-  get "static_pages/index"
-
-  get "static_pages/search"
-
-  get "static_pages/register"
-
-  get "static_pages/home"
-
-  get "static_pages/help"
-
-
-
 
   resources :keywords
-
-
   resources :skills
-
   resources :courses
   resources :users
+  resources :offers
+
+
+  match '/signup',  to: 'users#new'
+
+  resources :offers do 
+     collection do
+      get 'search'
+     end
+  end
 
 
   # The priority is based upon order of creation:
