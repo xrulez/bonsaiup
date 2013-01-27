@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+  <%= @offer %>
+<p>
+  <b>Skill:</b>
+  <%= @offer.skill_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @offer.user_id %>
+</p>
+
+<p>
+  <b>Place:</b>
+  <%= @offer.place %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%= @offer.time %>
+</p>
+
+
+<%= link_to 'Edit', edit_offer_path(@offer) %> |
+<%= link_to 'Back', offers_path %>

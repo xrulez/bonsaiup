@@ -1,5 +1,8 @@
  <%= form_tag :controller => 'offers', :action => 'search', :method => 'get' do %>
    <%= text_field_tag :search, params[:search], :id => 'search_field' %>
-   <%= submit_tag "Search", :name => nil %> 
-   <%= link_to_function "Clear", "$('search_field').clear()" %>
-<% end %> 
+   <%= submit_tag "Search for something special to learn", :name => nil %> 
+<% end %>
+<form action="/offers/search" method="get" class="search_field">
+   <input type="text" placeholder="Search" class="search-query span2" name="query">
+</form>
+

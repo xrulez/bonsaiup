@@ -13,12 +13,18 @@ class OffersController < ApplicationController
   # GET /offers/1
   # GET /offers/1.json
   def show
-    @offer = Offer.find(params[:id])
+  @keywords= Keyword.find(:all, :conditions => ['keyword LIKE ?', "%#{search}%"])
+  @offers = Offer.all
+  # @skills = .find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+  # @offers = Offer.find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+   
+   #@offers = Offer.search params[:search]
+  #  @offer = Offer.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @offer }
-    end
+   # respond_to do |format|
+    #  format.html # show.html.erb
+   #   format.json { render json: @offer }
+   # end
   end
 
   # GET /offers/new
@@ -82,7 +88,9 @@ class OffersController < ApplicationController
   end
 
   def search
-    @offers = Offer.search params[:search]
+   #@offers = Offer.find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+    #@offers = Offer.search params[:search]
+
   end 
 
 end

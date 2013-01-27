@@ -1,25 +1,29 @@
-<p id="notice"><%= notice %></p>
+<h1>Listing offers</h1>
 
-<p>
-  <b>Skill:</b>
-  <%= @offer.skill_id %>
-</p>
+<table>
+  <tr>
+    <th>Skill</th>
+    <th>User</th>
+    <th>Place</th>
+    <th>Time</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
 
-<p>
-  <b>User:</b>
-  <%= @offer.user_id %>
-</p>
+<% @offers.each do |offer| %>
+  <tr>
+    <td><%= offer.skill_id %></td>
+    <td><%= offer.user_id %></td>
+    <td><%= offer.place %></td>
+    <td><%= offer.time %></td>
+    <td><%= link_to 'Show', offer %></td>
+    <td><%= link_to 'Edit', edit_offer_path(offer) %></td>
+    <td><%= link_to 'Destroy', offer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
 
-<p>
-  <b>Place:</b>
-  <%= @offer.place %>
-</p>
+<br />
 
-<p>
-  <b>Time:</b>
-  <%= @offer.time %>
-</p>
-
-
-<%= link_to 'Edit', edit_offer_path(@offer) %> |
-<%= link_to 'Back', offers_path %>
+<%= link_to 'New Offer', new_offer_path %>

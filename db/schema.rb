@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130126213935) do
+ActiveRecord::Schema.define(:version => 20130126224718) do
 
   create_table "bookmarks", :force => true do |t|
     t.string   "index"
@@ -40,6 +40,15 @@ ActiveRecord::Schema.define(:version => 20130126213935) do
   create_table "microposts", :force => true do |t|
     t.string   "content"
     t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "offers", :force => true do |t|
+    t.integer  "skill_id"
+    t.integer  "user_id"
+    t.string   "place"
+    t.string   "time"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
