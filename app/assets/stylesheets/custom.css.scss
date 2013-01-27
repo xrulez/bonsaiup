@@ -139,6 +139,7 @@ h4
 #footerContent
 {
 	width: 960px;
+	
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -152,6 +153,49 @@ h4
 {
 	font-size: 10px;
 }
+
+
+
+/* CONTENT STUFF  */
+.welcomeBox
+{
+	height: 319px;
+	width: auto;
+	padding: 35px 25px;
+	
+	background: URL('CenterGraphic.jpg') red no-repeat;
+}
+
+.welcomeBox_headline
+{
+	display: block;
+	font-size: 32px;
+	color: #6c9e3a;
+	font-weight: bold;
+	margin-bottom: 18px;
+	
+	line-height: 32px;	
+}
+
+.welcomeBox_paragraph
+{
+	color: #323332;
+	font-size: 16px;
+	line-height: 22px;
+	margin-bottom: 14px;
+}
+
+.welcomeBox ul
+{
+	padding-left: 15px;
+	margin: 0;
+}
+.welcomeBox ul li
+{
+	margin-bottom: 8px;
+	font-size: 14px;
+}
+
 
 
 
